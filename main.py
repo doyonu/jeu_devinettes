@@ -3,13 +3,12 @@ import random
 def bornes():
     minimum = int(input("définissez les bornes, minimum: "))
     maximum = int(input("définissez les bornes, maximum: "))
-    chiffre_aleatoire = random.randint(minimum, maximum)
-    return minimum, maximum
-
-
-essai = int(input("J’ai choisi un nombre au hasard entre %d et %d."
-            "\nÀ vous de le deviner..."
-            "\nEntrez votre essai :" %(bornes())))
+    aleatoire = random.randint(minimum, maximum)
+    print("J’ai choisi un nombre au hasard entre %d et %d."
+        "\nÀ vous de le deviner..."% (minimum, maximum))
+    return aleatoire
+chiffre_aleatoire = bornes()
+essai = int(input("Entrez votre essai :"))
 
 nb_essais = 0
 boucle = True
