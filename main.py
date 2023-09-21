@@ -1,11 +1,15 @@
 import random
 
-minimum = int(input("définissez les bornes, minimum: "))
-maximum = int(input('maximum: '))
+def bornes():
+    minimum = int(input("définissez les bornes, minimum: "))
+    maximum = int(input("définissez les bornes, maximum: "))
+    chiffre_aleatoire = random.randint(minimum, maximum)
+    return minimum, maximum
+
 
 essai = int(input("J’ai choisi un nombre au hasard entre %d et %d."
             "\nÀ vous de le deviner..."
-            "\nEntrez votre essai :" %(minimum, maximum)))
+            "\nEntrez votre essai :" %(bornes())))
 
 nb_essais = 0
 boucle = True
@@ -26,4 +30,3 @@ while boucle:
 
     else:
         pass
-
