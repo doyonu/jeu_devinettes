@@ -15,14 +15,9 @@ essai = int(input("Entrez votre essai :"))
 
 #boucle d'essai (while)
 nb_essais = 0
-boucle = True
-while boucle:
-    if essai == chiffre_aleatoire:
-        print("bravo! Vous avez terminé avec %d essais" %(nb_essais))
-        boucle = False
-#fin
+while essai != chiffre_aleatoire:
 
-    elif essai > chiffre_aleatoire:
+    if essai > chiffre_aleatoire:
         print("chiffre plus petit")
         essai = int(input("nouveau essai:"))
         nb_essais += 1
@@ -34,3 +29,4 @@ while boucle:
 
     else:
         pass
+print("bravo! Vous avez terminé avec %d essais" % (nb_essais))
