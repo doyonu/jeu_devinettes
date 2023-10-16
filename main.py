@@ -12,11 +12,10 @@ def bornes():
         "\nÀ vous de le deviner..."% (minimum, maximum))
     return aleatoire
 
-#premier essai
 chiffre_aleatoire = bornes()
 essai = int(input("Entrez votre essai :"))
 
-#boucle d'essai (while)
+#boucle du jeu (while)
 while choix == "oui":
 
 #chiffre trop grand
@@ -33,11 +32,10 @@ while choix == "oui":
 
     else:
         print("bravo! Vous avez terminé avec %d essais" % (nb_essais))
-#choix recommencer
         choix = input("voulez-vous recommencer?")
+#choix recommencer
         if choix == "oui":
             chiffre_aleatoire = bornes()
             essai = 0
-        else:
-            pass
+            nb_essais = 0
 print("au revoir")
